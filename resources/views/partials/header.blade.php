@@ -1,6 +1,6 @@
 <header>
-    <h1>Header</h1>
+    <h1 class="text-center">Lista Dei Treni</h1>
 
-    <a href="{{route('home')}}">Home</a>
-    <a href="{{route('nuova-pagina')}}">Nuova Pagina</a>
+    <a class="mx-3" href="{{ route('home') }}">Home</a>
+    <a class="mx-3" href="{{ route('trains') }}">Treni</a>
 </header>

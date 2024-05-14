@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Train;
 
 class PageController extends Controller
 {
@@ -12,8 +13,9 @@ class PageController extends Controller
         return view('home');
     }
 
-    public function nuovaPagina()
+    public function trains()
     {
-        return view('nuova-pagina');
+        $trains = Train::paginate(10);
+        return view('trains', compact('trains'));
     }
 }

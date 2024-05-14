@@ -15,7 +15,7 @@ class TrainTableSeederFaker extends Seeder
      */
     public function run(Faker $faker): void
     {
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 60; $i++) {
             $new_train = new Train();
             $new_train->company = $faker->words(2, true);
             $new_train->slug = $this->generateSlug($new_train->company);
