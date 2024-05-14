@@ -5,6 +5,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Compagnia</th>
                     <th scope="col">Stazione di Partenza</th>
                     <th scope="col">Stazione di Arrivo</th>
@@ -20,6 +21,7 @@
             <tbody>
                 @foreach ($trains as $train)
                     <tr>
+                        <td>{{ $train->id }}</td>
                         <td>{{ $train->company }}</td>
                         <td>{{ $train->departure_station }}</td>
                         <td>{{ $train->arrival_station }}</td>
@@ -35,6 +37,8 @@
 
             </tbody>
         </table>
-
+        <div class="container">
+            {{ $trains->links() }}
+        </div>
     </div>
 @endsection
